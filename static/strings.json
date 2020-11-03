@@ -1,0 +1,13 @@
+{
+    "title": "Robert Dekovich",
+    "routes": [
+        {"title": "Home", "route": "/"},
+        {"title": "About", "route": "/about"},
+        {"title": "Experience", "route": "/experience"},
+        {"title": "Education", "route": "/education"},
+        {"title": "Patents", "route": "/patents"},
+        {"title": "Projects", "route": "/projects"},
+        {"title": "Contact", "route": "/contact"}
+    ],
+    "copyright": "Copyright © 2020 - Robert Dekovich.  All Rights Reserved."
+}
