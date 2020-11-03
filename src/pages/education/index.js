@@ -13,7 +13,7 @@
 
 function Education () {
     return (
-        <p>This is the education page!</p>
+        <p></p>
     )
 }
 

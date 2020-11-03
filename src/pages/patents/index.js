@@ -13,7 +13,7 @@
 
 function Patents () {
     return (
-        <p>This is the patents page!</p>
+        <p></p>
     )
 }
 

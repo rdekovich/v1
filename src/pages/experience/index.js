@@ -12,7 +12,7 @@
 
 function Experience () {
     return (
-        <p>This is the experience page!</p>
+        <p></p>
     )
 }
 
