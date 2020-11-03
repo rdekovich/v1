@@ -42,7 +42,7 @@ function Footer () {
         // If the information has been loaded..
         if (githubInfo.stars !== null && githubInfo.forks !== null) {
             return (
-                <a href={strings.github} target="_blank" rel="noreferrer">
+                <a href={strings.github} target="_blank" rel="noreferrer" style={{textDecoration: 'none'}}>
                     <div>
                         <span className="github-span">
                             <AiFillStar size={14} />
