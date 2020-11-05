@@ -15,7 +15,9 @@ import {
   Link,
   Route
 } from "react-router-dom";
+import Scroll from 'react-scroll';
 import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
@@ -35,28 +37,44 @@ function App () {
   return (
     <Router>
       <Container className="p-0" fluid>
-        <Navbar className="border-bottom" bg="transparent" expand="lg">
+        <Navbar id="nav" className="border-bottom sticky-top" bg="white" expand="lg">
           <Navbar.Brand style={{fontWeight: 'bold'}}>{strings.title}</Navbar.Brand>
-          <Navbar.Toggle className="border-0" aria-controls="navbar-toggle"/>
+          <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" style={{border: 'none', outline: 'none'}}/>
           <Navbar.Collapse id="navbar-toggle">
             <Nav className="ml-auto">
-              <Link className="nav-link" to={strings.routes[0].route}>{strings.routes[0].title}</Link>
-              <Link className="nav-link" to={strings.routes[1].route}>{strings.routes[1].title}</Link>
-              <Link className="nav-link" to={strings.routes[2].route}>{strings.routes[2].title}</Link>
-              <Link className="nav-link" to={strings.routes[3].route}>{strings.routes[3].title}</Link>
-              <Link className="nav-link" to={strings.routes[4].route}>{strings.routes[4].title}</Link>
-              <Link className="nav-link" to={strings.routes[5].route}>{strings.routes[5].title}</Link>
-              <Link className="nav-link" to={strings.routes[6].route}>{strings.routes[6].title}</Link>
+              <a class="nav-link" href={'#' + strings.routes[0].route}>{strings.routes[0].title}</a>
+              <a class="nav-link" href={'#' + strings.routes[1].route}>{strings.routes[1].title}</a>
+              <a class="nav-link" href={'#' + strings.routes[2].route}>{strings.routes[2].title}</a>
+              <a class="nav-link" href={'#' + strings.routes[3].route}>{strings.routes[3].title}</a>
+              <a class="nav-link" href={'#' + strings.routes[4].route}>{strings.routes[4].title}</a>
+              <a class="nav-link" href={'#' + strings.routes[5].route}>{strings.routes[5].title}</a>
+              <a class="nav-link" href={'#' + strings.routes[6].route}>{strings.routes[6].title}</a>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-        <Route path={strings.routes[0].route} exact render={() => <Home />}/>
-        <Route path={strings.routes[1].route} render={() => <About />}/>
-        <Route path={strings.routes[2].route} render={() => <Experience />}/>
-        <Route path={strings.routes[3].route} render={() => <Education />}/>
-        <Route path={strings.routes[4].route} render={() => <Patents />}/>
-        <Route path={strings.routes[5].route} render={() => <Projects />}/>
-        <Route path={strings.routes[6].route} render={() => <Contact />}/>
+        <Container data-spy="scroll" data-target="#nav" data-offset="0">
+          <Row id={strings.routes[0].route}>
+            <Home />
+          </Row>
+          <Row id={strings.routes[1].route}>
+            <About />
+          </Row>
+          <Row id={strings.routes[2].route}>
+            <Experience />
+          </Row>
+          <Row id={strings.routes[3].route}>
+            <Education />
+          </Row>
+          <Row id={strings.routes[4].route}>
+            <Patents />
+          </Row>
+          <Row id={strings.routes[5].route}>
+            <Projects />
+          </Row>
+          <Row id={strings.routes[6].route}>
+            <Contact />
+          </Row>
+        </Container>
         <Footer />
       </Container>
     </Router>

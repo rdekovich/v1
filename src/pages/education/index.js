@@ -11,9 +11,17 @@
  * @file pages/education/index.js
  */
 
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
+import "@css/education.css";
+
 function Education () {
     return (
-        <p></p>
+        <Container fluid className="education">
+
+        </Container>
     )
 }
 

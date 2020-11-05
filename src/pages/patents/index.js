@@ -11,9 +11,17 @@
  * @file pages/patents/index.js
  */
 
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
+import "@css/patents.css";
+
 function Patents () {
     return (
-        <p></p>
+        <Container fluid className="patents">
+
+        </Container>
     )
 }
 

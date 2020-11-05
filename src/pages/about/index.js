@@ -11,9 +11,17 @@
  * @file pages/about/index.js
  */
 
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
+import "@css/about.css";
+
 function About () {
     return (
-        <p></p>
+        <Container fluid className="about">
+
+        </Container>
     )
 }
 

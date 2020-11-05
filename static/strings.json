@@ -1,15 +1,16 @@
 {
     "title": "Robert Dekovich",
     "routes": [
-        {"title": "Home", "route": "/"},
-        {"title": "About", "route": "/about"},
-        {"title": "Experience", "route": "/experience"},
-        {"title": "Education", "route": "/education"},
-        {"title": "Patents", "route": "/patents"},
-        {"title": "Projects", "route": "/projects"},
-        {"title": "Contact", "route": "/contact"}
+        {"title": "Home", "route": ""},
+        {"title": "About", "route": "about"},
+        {"title": "Experience", "route": "experience"},
+        {"title": "Education", "route": "education"},
+        {"title": "Patents", "route": "patents"},
+        {"title": "Projects", "route": "projects"},
+        {"title": "Contact", "route": "contact"}
     ],
     "copyright": "Copyright © 2020 - Robert Dekovich.  All Rights Reserved.",
     "github": "https://github.com/rdekovich/rdekovich-v1",
-    "githubAPI": "https://api.github.com/repos/rdekovich/rdekovich-v1"
+    "githubAPI": "https://api.github.com/repos/rdekovich/rdekovich-v1",
+    "email": "dekovich@umich.edu"
 }
