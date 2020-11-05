@@ -18,7 +18,7 @@
 
  import {AiOutlineFork, AiFillStar} from 'react-icons/ai';
 
- import strings from '@static/strings.json';
+ import strings from '@content/strings.json';
  import '@css/footer.css';
 
 function Footer () {

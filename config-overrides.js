@@ -6,7 +6,9 @@ module.exports = function override(config) {
     '@css': 'src/css',
     '@fonts': 'src/fonts',
     '@images': 'src/images',
+    '@content': 'content/',
     '@static': 'static/',
+    '@utils': 'src/utils',
     '@pages': 'src/pages'
   }) (config)
 

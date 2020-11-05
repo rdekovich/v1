@@ -17,7 +17,7 @@
  import '@css/home.css';
  import '@css/mixins.css';
 
- import strings from '@static/strings.json';
+ import strings from '@content/strings.json';
 
  function Home () {
      return (
@@ -27,7 +27,7 @@
             <subheader>I make impactful technology.</subheader>
             <intro>
                 I'm a software engineer based in Austin, TX specializing in designing
-                and building pragmatic, human-centered solutions to hard problems.
+                and building impactful, innovative solutions to hard problems.
             </intro>
             <Row>
                 <Col className="home-col" md={3} sm={6} xs={5}>

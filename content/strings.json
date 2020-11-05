@@ -1,0 +1,47 @@
+{
+    "title": "Robert Dekovich",
+    "routes": [
+        {"title": "Home", "route": ""},
+        {"title": "About", "route": "about"},
+        {"title": "Experience", "route": "experience"},
+        {"title": "Education", "route": "education"},
+        {"title": "Patents", "route": "patents"},
+        {"title": "Projects", "route": "projects"},
+        {"title": "Contact", "route": "contact"}
+    ],
+    "copyright": "Copyright © 2020 - Robert Dekovich.  All Rights Reserved.",
+    "github": "https://github.com/rdekovich/rdekovich-v1",
+    "githubAPI": "https://api.github.com/repos/rdekovich/rdekovich-v1",
+    "email": "dekovich@umich.edu",
+    "skills": ["JavaScript", "Python", "HTML/CSS", "C++", "React", "C"],
+    "jobs": [
+        {
+         "company": "General Motors", 
+         "title": "Software Engineer",
+         "location": "Austin, TX",
+         "start": "January 2021",
+         "end": "Present",
+         "url": "https://www.gm.com/",
+         "tasks": [
+             "Write modern, efficient, maintainable code for a broad range of internal projects and clients",
+             "Develop application-level vehicle software interfaces, as well as developmental recognition technologies using machine learning",
+             "Communicate with a multi-disciplinary team of engineers, researchers, designers and clients daily"
+         ]
+        },
+        {
+         "company": "VOXX Automotive", 
+         "title": "Software Engineer Intern",
+         "location": "Auburn Hills, MI",
+         "start": "May 2019",
+         "end": "December 2020",
+         "url": "https://www.voxxautomotive.com/",
+         "tasks": [
+             "Designed and built a patented system and algorithm for localizing users around a vehicle",
+             "Conducted extensive research examining the use of machine learning in future company products",
+             "Contributed algorithmic assistance to many of the company's new-line products",
+             "Developed numerous mobile applications in React Native for in-house product testing",
+             "Leveraged experience with DevOps framworks and Python to create automation scripts and pipelines to improve engineer efficiency"
+         ]
+        }
+    ]
+}

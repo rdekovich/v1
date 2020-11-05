@@ -1,4 +1,21 @@
 .about {
-    background-color: green;
     min-height: 100vh;
+}
+
+.about-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 5vh;
+}
+
+.picture {
+    position: relative;
+    max-width: 300px;
+
+    @media (max-width: 768px) {
+        margin: 50px auto 0;
+        width: 70%;
+    }
 }

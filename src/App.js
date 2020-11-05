@@ -31,7 +31,7 @@ import Patents from '@pages/patents';
 import Projects from '@pages/projects';
 import Contact from '@pages/contact';
 
-import strings from '@static/strings.json';
+import strings from '@content/strings.json';
 
 function App () {
   return (

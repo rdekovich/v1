@@ -16,11 +16,12 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 import "@css/patents.css";
+import "@css/mixins.css";
 
 function Patents () {
     return (
         <Container fluid className="patents">
-
+            <h2 className="preface">Patents</h2>
         </Container>
     )
 }
