@@ -27,23 +27,11 @@ import strings from "@content/strings.json";
 import umich from "@images/education/michigan.png";
 import mcc from "@images/education/mcc.png";
 
-// CONSTANT: Defined color maps for schools
-const colormap = {
-    "University of Michigan": {
-        primary: "#00274C",
-        secondary: "#FFCB05"
-    },
-    "Macomb Community College": {
-        primary: "#065597",
-        secondary: "#b3b2af"
-    }
-}
-
 
 const Button = ({isActive, onClick, school, id}) => {
     // Acquire the background color and the text color of the button
-    const background = isActive ? hex2rgba(colormap[school].secondary, 0.3) : "transparent";
-    const textcolor = isActive ? colormap[school].primary : "gray";
+    const background = isActive ? hex2rgba("#546bf9", 0.125) : "transparent";
+    const textcolor = isActive ? "#546bf9" : "gray";
 
     // Acquire the border width of the left border based on if this is the active tab
     const width = isActive ? 4 : 2;
@@ -107,9 +95,9 @@ function Education () {
                                         <span>{strings.education[activeTabID].degree}</span>
                                         <span>{" "}</span>
                                         <span>{strings.education[activeTabID].major}</span>
-                                        <span style={{color: colormap[strings.education[activeTabID].school].primary}}>
+                                        <span style={{color: "#546bf9"}}>
                                             &nbsp;@&nbsp;
-                                            <a href={strings.education[activeTabID].url} style={{color: colormap[strings.education[activeTabID].school].primary}}>
+                                            <a href={strings.education[activeTabID].url} style={{color: "#546bf9"}}>
                                                 {strings.education[activeTabID].school}
                                             </a>
                                         </span>
