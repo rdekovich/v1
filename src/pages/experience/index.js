@@ -33,11 +33,10 @@ const Button = ({isActive, onClick, company, id}) => {
             style={{color: color, 
                     borderLeftColor: color, 
                     borderLeftWidth: width, 
-                    borderTopRightRadius: 5,
-                    borderBottomRightRadius: 5,
                     backgroundColor: isActive ? hex2rgba(color, 0.125) : 'transparent'}}
             className="tab"
             onClick={onClick}
+            id={`tab-${id}`}
         >
             <span>{company}</span>
         </button>
@@ -88,49 +87,48 @@ function Experience () {
     return (
         <Container fluid className="experience">
             <h2 className="preface">Experience</h2>
-            <Container className="experience-container">
-                <div className="inner" md={2}>
-                    <tablist role="tablist" aria-label="Job tabs" onKeyDown={onKeyDown}>
-                        {strings.jobs.map((job, i) => {
-                            const {company} = job;
-                            return (
-                                <li className="tab" key={i}>
+            <Container fluid>
+                <Row className="experience-container">
+                    <Col lg={5} md={6} sm={12} xs={12}>
+                        <tablist aria-label="Jobs" onKeyDown={onKeyDown}>
+                            {strings.jobs.map((job, i) => {
+                                return (
                                     <Button 
                                         isActive={activeTabID == i}
                                         onClick={() => setActiveTabID(i)}
-                                        company={company}
+                                        company={job.company}
                                         id={i}
                                     />
-                                </li>
-                            )
-                        })}
-                    </tablist>
-                </div>
-                <div className="content" md={10}>
-                    <h4 className="header">
-                        <span>{strings.jobs[activeTabID].title}</span>
-                        <span className="company">
-                            &nbsp;@&nbsp;
-                            <a href={strings.jobs[activeTabID].url}>
-                                {strings.jobs[activeTabID].company}
-                            </a>
-                        </span>
-                    </h4>
-                    <div className="range">
-                        <span>{strings.jobs[activeTabID].start}</span>
-                        <span>{' - '}</span>
-                        <span>{strings.jobs[activeTabID].end}</span>
-                    </div>
-                    <ul className="fancy-list">
-                        {strings.jobs[activeTabID].tasks.map((task, i) => {
-                            return (
-                                <li className="elt" id={`elt-${i}`}>
-                                    {task}
-                                </li>
-                            )
-                        })}
-                    </ul>
-                </div>
+                                )
+                            })}
+                        </tablist>
+                    </Col>
+                    <Col className="content" lg={7} md={6} sm={12} xs={12}>
+                        <h4 className="header">
+                            <span>{strings.jobs[activeTabID].title}</span>
+                            <span className="company">
+                                &nbsp;@&nbsp;
+                                <a href={strings.jobs[activeTabID].url}>
+                                    {strings.jobs[activeTabID].company}
+                                </a>
+                            </span>
+                        </h4>
+                        <div className="range">
+                            <span>{strings.jobs[activeTabID].start}</span>
+                            <span>{" - "}</span>
+                            <span>{strings.jobs[activeTabID].end}</span>
+                        </div>
+                        <ul className="fancy-list">
+                            {strings.jobs[activeTabID].tasks.map((task, i) => {
+                                return (
+                                    <li className="elt" id={`elt-${i}`}>
+                                        {task}
+                                    </li>
+                                )
+                            })}
+                        </ul>
+                    </Col>
+                </Row>
             </Container>
         </Container>
     )

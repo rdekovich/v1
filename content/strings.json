@@ -16,7 +16,7 @@
     "skills": ["JavaScript", "Python", "HTML/CSS", "C++", "React", "C"],
     "jobs": [
         {
-         "company": "General Motors", 
+         "company": "GM", 
          "title": "Software Engineer",
          "location": "Austin, TX",
          "start": "January 2021",

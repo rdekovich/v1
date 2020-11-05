@@ -1,21 +1,12 @@
 .experience {
     min-height: 100vh;
-    justify-content: center;
-    align-items: center;
 }
 
 .experience-container {
-    max-width: 700px;
-    display: flex;
-    flex-direction: row;
 }
 
 .inner {
     display: flex;
-
-    @media (max-width: 600px) {
-        display: block;
-    }
 }
 
 tablist {
@@ -25,46 +16,13 @@ tablist {
     padding: 0;
     margin: 0;
     list-style: none;
-
-    @media (max-width: 600px) {
-        display: flex;
-        flex-direction: column;
-        overflow-x: scroll;
-        width: calc(100% + 100px);
-        margin-left: -50px;
-        margin-bottom: 30px;
-    }
-
-    @media (max-width: 480px) {
-        width: calc(100% + 50px);
-        margin-left: -25px;
-    }
-}
-
-li.tab:first-of-type {
-    @media (max-width: 600px) {
-        margin-left: 50px;
-    }
-
-    @media (max-width: 480px) {
-        margin-left: 25px;
-    }
-}
-
-li.tab:last-of-type {
-    @media (max-width: 600px) {
-        padding-right: 50px;
-    }
-    @media (max-width: 480px) {
-        padding-right: 25px;
-    }
 }
 
 button.tab {
     display: flex;
     align-items: center;
     width: 100%;
-    height: var(42px);
+    height: 42px;
     padding: 0 20px 2px;
     border-left: 2px solid var(gray);
     border-top: none;
@@ -75,18 +33,6 @@ button.tab {
     font-weight: 500;
     text-align: left;
     white-space: nowrap;
-
-    @media (max-width: 768px) {
-        padding: 0 15px 2px;
-    }
-
-    @media (max-width: 600px) {
-        min-width: 120px;
-        padding: 0 15px;
-        border-left: 0;
-        border-bottom: 2px solid var("#546bf9");
-        text-align: center;
-      }
 }
 
 button.tab:focus {
@@ -98,14 +44,6 @@ div.content {
     width: 100%;
     height: auto;
     padding-left: 30px;
-
-    @media (max-width: 768px) {
-        padding-left: 20px;
-    }
-
-    @media (max-width: 600px) {
-        padding-left: 0;
-    }
 }
 
 div.range {
@@ -116,10 +54,33 @@ div.range {
 
 h4.header {
     margin-bottom: 5px;
-    font-size: var(22px);
+    font-size: 22px;
     font-weight: 500;
 }
 
 span.company {
-    color: "#546bf9";
+    color: #546bf9;
+}
+
+@media (max-width: 768px) {
+    h4.header {
+        margin-top: 15px;
+    }
+
+    div.content {
+        padding-left: 20px;
+    }
+
+    .inner {
+        display: block;
+    }
+
+    button.tab {
+        min-width: 120px;
+        padding: 0 15px;
+        border-left: 0;
+        border-bottom: 2px solid var("#546bf9");
+        text-align: center;
+        padding: 0 15px 2px;
+    }
 }
