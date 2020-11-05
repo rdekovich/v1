@@ -46,51 +46,14 @@ const Button = ({isActive, onClick, company, id}) => {
 function Experience () {
     // Define state for the Experience component
     const [activeTabID, setActiveTabID] = useState(0);
-    const [tabFocus, setTabFocus] = useState(null);
-    const tabs = useRef([]);
-
-    // Action to focus a tab (for arrow/key progression only)
-    const focusTab = () => {
-        if (tabs.current[tabFocus]) {
-          tabs.current[tabFocus].focus();
-          return;
-        }
-
-        // If we're at the end, go to the start
-        if (tabFocus >= tabs.current.length) {
-          setTabFocus(0);
-        }
-
-        // If we're at the start, move to the end
-        if (tabFocus < 0) {
-          setTabFocus(tabs.current.length - 1);
-        }
-    };
-
-    // Focus on tabs when using up & down arrow keys
-    const onKeyDown = e => {
-        if (e.key === KEY_CODES.ARROW_UP || e.key === KEY_CODES.ARROW_DOWN) {
-            e.preventDefault();
-
-            // Move up
-            if (e.key === KEY_CODES.ARROW_UP) {
-                setTabFocus(tabFocus - 1);
-            }
-
-            // Move down
-            if (e.key === KEY_CODES.ARROW_DOWN) {
-                setTabFocus(tabFocus + 1);
-            }
-        }
-    };
 
     return (
         <Container fluid className="experience">
             <h2 className="preface">Experience</h2>
             <Container fluid>
-                <Row className="experience-container">
+                <Row>
                     <Col lg={5} md={6} sm={12} xs={12}>
-                        <tablist aria-label="Jobs" onKeyDown={onKeyDown}>
+                        <tablist aria-label="Experience">
                             {strings.jobs.map((job, i) => {
                                 return (
                                     <Button 
@@ -114,6 +77,8 @@ function Experience () {
                             </span>
                         </h4>
                         <div className="range">
+                            <span className="location">{strings.jobs[activeTabID].location}</span>
+                            <span>{" || "}</span>
                             <span>{strings.jobs[activeTabID].start}</span>
                             <span>{" - "}</span>
                             <span>{strings.jobs[activeTabID].end}</span>

@@ -44,7 +44,7 @@ li.elt:before {
     content: '▹';
     position: absolute;
     left: 0;
-    color: var(gray);
+    color:  #546bf9;
 }
 
 .shadow {

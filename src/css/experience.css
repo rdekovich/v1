@@ -2,9 +2,6 @@
     min-height: 100vh;
 }
 
-.experience-container {
-}
-
 .inner {
     display: flex;
 }
@@ -47,9 +44,15 @@ div.content {
 }
 
 div.range {
-    margin-bottom : 30px;
     color: var(gray);
-    font-size: var(13px);
+    font-size: 13px;
+    margin-bottom : 30px;
+}
+
+span.location {
+    color: var(gray);
+    font-size: 13px;
+    font-weight: 500;
 }
 
 h4.header {

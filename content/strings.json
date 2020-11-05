@@ -43,5 +43,37 @@
              "Leveraged experience with DevOps framworks and Python to create automation scripts and pipelines to improve engineer efficiency"
          ]
         }
+    ],
+    "education": [
+        {
+         "school": "University of Michigan",
+         "location": "Ann Arbor, MI",
+         "url": "https://umich.edu/",
+         "degree": "BS",
+         "major": "Computer Science",
+         "honors": "",
+         "start": "September 2018",
+         "end": "December 2020",
+         "points": [
+             "Attended the CSE program through the College of Engineering",
+             "Focused on a breadth of CS topics, including machine learning, AI, and cybersecurity",
+             "Coursework includes Operating Systems (EECS 482), Cybersecurity (EECS 388), Machine Learning (EECS 445), Mobile App Entrepreneurship (EECS 441) and Web Systems (EECS 485)"
+         ]
+        },
+        {
+         "school": "Macomb Community College",
+         "location": "Warren, MI",
+         "url": "https://www.macomb.edu/",
+         "degree": "AS",
+         "major": "Mathematics",
+         "honors": "Summa Cum Laude",
+         "start": "May 2016",
+         "end": "June 2018",
+         "points": [
+             "Completed general electives for my BS, with a heavy focus on analytical physics and theoretical mathematics",
+             "Competed in mathematics competitions under direction of the fantastic David B. Friday",
+             "Coursework includes Calculus I through III, Differential Equations, and Analytical Physics I and II"
+         ]
+        }
     ]
 }
