@@ -25,9 +25,9 @@ import rdekovich from "@images/rdekovich.png";
 function About () {
     return (
         <Container fluid className="about">
-            <h2 className="preface">About</h2>
+            <h2 className="preface"><span role="img" aria-label="about">✌️</span>About</h2>
             <Row>
-                <Col className="about-col" style={{backgroundColor: 'transparent'}} md={5} sm={12} xs={12}>
+                <Col className="about-col" style={{backgroundColor: 'transparent'}} md={6} sm={12} xs={12}>
                     <div>
                         <p>
                             Howdy!  I'm Rob, a software engineer based in wonderful Austin, TX.
@@ -47,12 +47,12 @@ function About () {
                         </p>
                     </div>
                     <ul className="skills-list">
-                        {strings.skills.map((skill, i) => <li className="elt" key={i}>{skill}</li>)}
+                        {strings.skills.map((skill, i) => <li className="elt mono" key={i}>{skill}</li>)}
                     </ul>
                 </Col>
-                <Col className="about-col" md={7} sm={12} xs={12}>
+                <Col className="pic-col align-items-center" md={6} sm={12} xs={12}>
                     <div className="picture">
-                        <Image src={rdekovich} roundedCircle fluid className="border shadow mt-2"/>
+                        <Image src={rdekovich} roundedCircle fluid className="border shadow"/>
                     </div>
                 </Col>
             </Row>

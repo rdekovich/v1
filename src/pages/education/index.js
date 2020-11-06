@@ -67,7 +67,7 @@ function Education () {
 
     return (
         <Container fluid className="education">
-            <h2 className="preface">Education</h2>
+            <h2 className="preface"><span role="img" aria-label="cap">🎓</span>Education</h2>
             <Container fluid>
                 <Row>
                     <Col lg={4} md={5} sm={12} xs={12}>
@@ -86,7 +86,7 @@ function Education () {
                     </Col>
                     <Col lg={8} md={7} sm={12} xs={12}>
                         <Container fluid>
-                            <Row>
+                            <Row className="edu-content">
                                 <Col lg={2} md={3} sm={3} xs={3} className="justify-content-center align-items-center d-flex m-0">
                                     <Image src={getLogo()} roundedCircle fluid/>
                                 </Col>
@@ -104,13 +104,13 @@ function Education () {
                                     </h4>
                                     <div className="edu-range">
                                         <span className="location">{strings.education[activeTabID].location}</span>
-                                        <span>{" || "}</span>
+                                        <span>{" | "}</span>
                                         <span>{strings.education[activeTabID].start}</span>
                                         <span>{" - "}</span>
                                         <span>{strings.education[activeTabID].end}</span>
                                     </div>
-                                    <div className="edu-range honors">
-                                        <span>{strings.education[activeTabID].honors ? strings.education[activeTabID].honors : ''}</span>
+                                    <div className="edu-range">
+                                        <span className="honors">{strings.education[activeTabID].honors ? strings.education[activeTabID].honors : ''}</span>
                                     </div>
                                 </Col>
                             </Row>

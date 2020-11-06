@@ -1,5 +1,5 @@
 .home {
-    min-height: 100vh;
+    min-height: 75vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,13 +13,11 @@
 }
 
 greeting {
-    font-size: clamp(var(14px), 5vw, var(16px));
-    font-weight: 400;
+    font-size: clamp(14px, 5vw, 16px);
+    font-family: monospace;
+    font-weight: 500;
     margin: 0 0 0 4px;
-
-    @media (max-width: 480px) {
-        margin: 0 0 20px 2px;
-    }
+    color: #546bf9;
 }
 
 name {
@@ -40,4 +38,10 @@ subheader {
 intro {
     margin: 50px 0 0;
     max-width: 500px;
+}
+
+@media (max-width: 480px) {
+    greeting {
+        margin: 0 0 20px 2px;
+    }
 }

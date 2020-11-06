@@ -13,6 +13,9 @@
     "github": "https://github.com/rdekovich/rdekovich-v1",
     "githubAPI": "https://api.github.com/repos/rdekovich/rdekovich-v1",
     "email": "dekovich@umich.edu",
+    "twitter": "https://twitter.com/robdekovich",
+    "githubUser": "https://github.com/rdekovich",
+    "linkedin": "https://www.linkedin.com/in/robdekovich/",
     "skills": ["JavaScript", "Python", "HTML/CSS", "C++", "React", "C"],
     "jobs": [
         {
@@ -74,6 +77,38 @@
              "Competed in mathematics competitions under direction of the fantastic David B. Friday",
              "Coursework includes Calculus I through III, Differential Equations, and Analytical Physics I and II"
          ]
+        }
+    ],
+    "patents": [
+        {
+         "date": "June 2020",
+         "title": "US20200186970A1",
+         "company": "VOXX Automotive",
+         "image": "patent01.png",
+         "github": "",
+         "external": "https://patentimages.storage.googleapis.com/07/87/53/62c9e8ac454b3b/US20200186970A1.pdf",
+         "tags": ["Python", "ML", "C", "Bluetooth", "Algorithm"],
+         "description": "A system and method for locating entities around a vehicle using a neural network trained on RSSI data."
+        }
+    ],
+    "projects": [
+        {
+         "date": "May 2020",
+         "title": "viribai",
+         "company": "Bytesap LLC",
+         "github": "https://github.com/bytesap/viribai",
+         "external": "https://viribai.web.app/",
+         "tags": ["React Native", "iOS", "Android", "JavaScript"],
+         "description": "A cross-platform strength training mobile app with beautiful UI, powerful analytics, and workout logging for weightlifters.  Built in React Native using JavaScript."
+        },
+        {
+         "date": "September 2020",
+        "title": "Rudder",
+        "company": "Michigan",
+        "github": "https://github.com/Rudder-EECS441/rudder",
+        "external": "",
+        "tags": ["React Native", "iOS", "Android", "JavaScript"],
+        "description": "A cross-platform mobile dating app, focusing on connecting individuals from different countries.  Built in React Native using JavaScript."
         }
     ]
 }

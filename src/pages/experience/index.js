@@ -49,7 +49,7 @@ function Experience () {
 
     return (
         <Container fluid className="experience">
-            <h2 className="preface">Experience</h2>
+            <h2 className="preface"><span role="img" aria-label="experience">💻</span>Experience</h2>
             <Container fluid>
                 <Row>
                     <Col lg={5} md={6} sm={12} xs={12}>
@@ -78,7 +78,7 @@ function Experience () {
                         </h4>
                         <div className="range">
                             <span className="location">{strings.jobs[activeTabID].location}</span>
-                            <span>{" || "}</span>
+                            <span>{" | "}</span>
                             <span>{strings.jobs[activeTabID].start}</span>
                             <span>{" - "}</span>
                             <span>{strings.jobs[activeTabID].end}</span>
