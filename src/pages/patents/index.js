@@ -249,7 +249,7 @@ const Patent = styled.div`
         bottom: 0;
         z-index: 1;
         transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-        background-color: gray;
+        background-color: #546bf9;
         mix-blend-mode: screen;
       }
     }
