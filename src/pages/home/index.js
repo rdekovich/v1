@@ -31,7 +31,7 @@
             </intro>
             <Row>
                 <Col className="home-col" md={3} sm={6} xs={5}>
-                    <a href="#" type="button" class="btn btn-primary">Resume</a>
+                    <a href={strings.resume} type="button" class="btn btn-primary">Resume</a>
                 </Col>
                 <Col className="home-col" md={3} sm={6} xs={5}>
                     <a type="button" class="btn btn-secondary" href={`mailto:${strings.email}`}>Contact</a>
