@@ -15,8 +15,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-
-import Footer from '@components/footer';
+import {Link} from "react-scroll";
 
 import Home from '@pages/home';
 import About from '@pages/about';
@@ -37,17 +36,31 @@ function App () {
         <GlobalStyle />
         <Container className="p-0" fluid>
           <Navbar id="nav" className="border-bottom sticky-top" bg="white" expand="lg">
-            <Navbar.Brand style={{fontWeight: 'bold'}}>{strings.title}</Navbar.Brand>
+            <Navbar.Brand className="nav-brand">{strings.title}</Navbar.Brand>
             <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" style={{border: 'none', outline: 'none'}}/>
             <Navbar.Collapse id="navbar-toggle">
               <Nav className="ml-auto">
-                <a class="nav-link" href={'#' + strings.routes[0].route}>{strings.routes[0].title}</a>
-                <a class="nav-link" href={'#' + strings.routes[1].route}>{strings.routes[1].title}</a>
-                <a class="nav-link" href={'#' + strings.routes[2].route}>{strings.routes[2].title}</a>
-                <a class="nav-link" href={'#' + strings.routes[3].route}>{strings.routes[3].title}</a>
-                <a class="nav-link" href={'#' + strings.routes[4].route}>{strings.routes[4].title}</a>
-                <a class="nav-link" href={'#' + strings.routes[5].route}>{strings.routes[5].title}</a>
-                <a class="nav-link" href={'#' + strings.routes[6].route}>{strings.routes[6].title}</a>
+                <Link activeClass="active" to="home" spy={true} smooth={true} offset={-70} duration={500}>
+                  <a class="nav-link nav-header" href={'#' + strings.routes[0].route}>{strings.routes[0].title}</a>
+                </Link>
+                <Link activeClass="active" to="about" spy={true} smooth={true} offset={-70} duration={500}>
+                  <a class="nav-link nav-header" href={'#' + strings.routes[1].route}>{strings.routes[1].title}</a>
+                </Link>
+                <Link activeClass="active" to="experience" spy={true} smooth={true} offset={-70} duration={500}>
+                  <a class="nav-link nav-header" href={'#' + strings.routes[2].route}>{strings.routes[2].title}</a>
+                </Link>
+                <Link activeClass="active" to="education" spy={true} smooth={true} offset={-70} duration={500}>
+                  <a class="nav-link nav-header" href={'#' + strings.routes[3].route}>{strings.routes[3].title}</a>
+                </Link>
+                <Link activeClass="active" to="patents" spy={true} smooth={true} offset={-70} duration={500}>
+                  <a class="nav-link nav-header" href={'#' + strings.routes[4].route}>{strings.routes[4].title}</a>
+                </Link>
+                <Link activeClass="active" to="projects" spy={true} smooth={true} offset={-70} duration={500}>
+                  <a class="nav-link nav-header" href={'#' + strings.routes[5].route}>{strings.routes[5].title}</a>
+                </Link>
+                <Link activeClass="active" to="contact" spy={true} smooth={true} offset={-70} duration={500}>
+                  <a class="nav-link nav-header" href={'#' + strings.routes[6].route}>{strings.routes[6].title}</a>
+                </Link>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
@@ -74,7 +87,6 @@ function App () {
                 <Contact />
               </Row>
             </Container>
-          <Footer />
         </Container>
       </ThemeProvider>
     </Router>

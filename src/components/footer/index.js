@@ -18,13 +18,11 @@ import styled from 'styled-components';
 import {AiOutlineFork, AiFillStar} from 'react-icons/ai';
 
 import strings from '@content/strings.json';
-import '@css/footer.css';
 
 const StyledFooter = styled.div`
     ${({theme}) => theme.mixins.fcenter}
     flex-direction: column;
-    margin-bottom: 30px;
-
+    margin-bottom: 10px;
 
     h1 {
         font-size: var(--md);
@@ -50,6 +48,10 @@ const StyledFooter = styled.div`
         max-width: 250px;
         font-weight: 400;
         font-family: var(--font-mono);
+    }
+
+    .github-span {
+        margin: 5px;
     }
 `;
 

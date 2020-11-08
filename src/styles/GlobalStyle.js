@@ -200,6 +200,17 @@
         font-weight: 400;
     }
 
+    .nav-brand {
+        font-weight: 900;
+        font-family: var(--font-main);
+    }
+
+    .nav-header {
+        font-family: var(--font-mono);
+        color: var(--black);
+        font-size: var(--md);
+    }
+
     .subtitle {
         color: var(--blue);
         margin: 0 0 20px 0;
