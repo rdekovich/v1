@@ -12,19 +12,14 @@
  */
 
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import styled from 'styled-components';
 
 import {AiFillFolderOpen, AiFillGithub, AiOutlineLink} from 'react-icons/ai';
 
-import styled from 'styled-components';
-
-import "@css/projects.css";
-import "@css/mixins.css";
-
 import strings from "@content/strings.json";
+import "@css/projects.css";
 
-const Grid = styled.div`
+const StyledGrid = styled.div`
     max-width: 1000px;
     margin: 0 auto;
     display: flex;
@@ -32,7 +27,7 @@ const Grid = styled.div`
     align-items: center;
 
     h2 {
-        font-size: clamp(24px, 5vw, 32px);
+        font-size: clamp(24px, 5vw, var(--heading));
     }
 
     .projects-grid {
@@ -47,9 +42,9 @@ const Grid = styled.div`
     }
 `
 
-const Project = styled.div`
+const StyledProject = styled.div`
     cursor: default;
-    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: var(--transition)
 
     &:hover,
     &:focus {
@@ -60,19 +55,16 @@ const Project = styled.div`
     }
 
     .project-inner {
-        box-shadow: 0 10px 30px -15px black;
-        transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        ${({theme}) => theme.mixins.boxshadow};
+        ${({theme}) => theme.mixins.fbetween};
         flex-direction: column;
         align-items: flex-start;
         position: relative;
         height: 100%;
         padding: 2rem 1.75rem;
-        border-radius: 4px;
-        background-color: white;
-        transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+        border-radius: var(--border-radius);
+        background-color: var(--white);
+        transition: var(--transition);
 
         &:hover,
         &:focus {
@@ -81,13 +73,11 @@ const Project = styled.div`
     }
 
     .project-top {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        ${({ theme }) => theme.mixins.fbetween};
         margin-bottom: 30px;
 
         .folder {
-            color: #546bf9;
+            color: var(--blue);
             svg {
                 width: 40px;
                 height: 40px;
@@ -96,7 +86,7 @@ const Project = styled.div`
 
         .project-links {
             margin-right: -10px;
-            color: #546bf9;
+            color: var(--slate-gray-tint);
 
             a {
                 padding: 5px 10px;
@@ -107,16 +97,17 @@ const Project = styled.div`
                 }
             }
         }
+    }
 
-        .project-title {
-            margin: 0 0 10px;
-            color: black;
-            font-size: 22px;
-        }
+    .project-title {
+        margin: 0 0 10px;
+        color: var(--black);
+        font-size: var(--xxl);
+    }
 
-        .project-description {
-            color: gray;
-        }
+    .project-description {
+        color: var(--slate-gray);
+        font-size: 17px;
     }
 
     .project-tag-list {
@@ -129,8 +120,8 @@ const Project = styled.div`
         list-style: none;
 
         li {
-            font-family: monospace;
-            font-size: 12px;
+            font-family: var(--font-mono);
+            font-size: var(--xxs);
             line-height: 1.75;
 
             &:not(:last-of-type) {
@@ -142,13 +133,13 @@ const Project = styled.div`
 
 function Projects () {
     return (
-        <Container fluid className="projects">
-            <h2 className="preface"><span role="img" aria-label="projects">📁</span>Projects</h2>
-            <Grid>
+        <Container fluid className="projects pb-5">
+            <h2 className="section-header">📁 Projects</h2>
+            <StyledGrid>
                 <div className="projects-grid">
                 {strings.projects.map((project, i) => {
                     return (
-                        <Project>
+                        <StyledProject>
                             <div className="project-inner">
                                 <header>
                                     <div className="project-top">
@@ -179,11 +170,11 @@ function Projects () {
                                     </ul>
                                 </footer>
                             </div>
-                        </Project>
+                        </StyledProject>
                     )
                 })}
                 </div>
-            </Grid>
+            </StyledGrid>
         </Container>
     )
 }

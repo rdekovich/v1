@@ -10,17 +10,14 @@
  */
 
 import Container from 'react-bootstrap/Container';
-
 import {AiOutlineTwitter, AiFillMail, AiOutlineGithub, AiFillLinkedin} from "react-icons/ai";
-
 import styled from "styled-components";
 
+import strings from "@content/strings.json";
 import "@css/contact.css";
 
-import strings from "@content/strings.json";
-
 const Social = styled.div`
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto 100px;
     text-align: center;
 
@@ -30,10 +27,16 @@ const Social = styled.div`
 
     h1 {
         font-size: clamp(40px, 5vw, 60px);
+        color: var(--black);
+        margin-bottom: 20px;
+    }
+
+    p {
+        max-width: 500px;
     }
 
     .social {
-        margin-top: 50px;
+        margin-top: 30px;
 
         a {
             margin: 10px;
@@ -47,7 +50,7 @@ function Contact () {
             <Social>
                 <h1>Wanna chat?</h1>
                 <p>
-                    Feel free to say what's up!  My inbox is always open.  I am totally
+                    Feel free to say what's up👋!  My inbox is always open.  I am totally
                     interested in new and cool opportunities, as well as talking to other
                     people interested in tech.
                 </p>

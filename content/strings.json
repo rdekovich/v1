@@ -20,7 +20,7 @@
     "skills": ["JavaScript", "Python", "HTML/CSS", "C++", "React", "C"],
     "jobs": [
         {
-         "company": "GM", 
+         "company": "General Motors", 
          "title": "Software Engineer",
          "location": "Austin, TX",
          "start": "January 2021",
@@ -33,7 +33,7 @@
          ]
         },
         {
-         "company": "VOXX Automotive", 
+         "company": "VOXX", 
          "title": "Software Engineer Intern",
          "location": "Auburn Hills, MI",
          "start": "May 2019",
@@ -88,7 +88,7 @@
          "image": "patent01.png",
          "github": "",
          "external": "https://patentimages.storage.googleapis.com/07/87/53/62c9e8ac454b3b/US20200186970A1.pdf",
-         "tags": ["Python", "ML", "C", "Bluetooth", "Algorithm"],
+         "tags": ["Python", "TensorFlow", "Data", "C", "Bluetooth"],
          "description": "A system and method for locating entities around a vehicle using a neural network trained on RSSI data."
         }
     ],

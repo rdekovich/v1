@@ -12,19 +12,14 @@
  */
 
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
+import styled from 'styled-components';
 
 import {AiFillGithub, AiOutlineLink} from 'react-icons/ai';
 
-import styled from 'styled-components';
-
-import "@css/patents.css";
-import "@css/mixins.css";
-
 import strings from '@content/strings.json';
 import patent01 from "@images/patents/patent01.png"
+import "@css/patents.css";
 
 const Patent = styled.div`
   display: grid;
@@ -107,55 +102,42 @@ const Patent = styled.div`
 
   .patent-overline {
     margin: 10px 0;
-    color: #546bf9;
-    font-size: 13px;
-    font-family: monospace;
+    color: var(--blue);
+    font-size: var(--xs);
+    font-family: var(--font-mono);
     font-weight: 500;
   }
 
   .patent-title {
-    color: slate;
+    color: var(--black);
     font-size: clamp(24px, 5vw, 28px);
 
     @media (min-width: 768px) {
       margin: 0 0 20px;
     }
-
-    @media (max-width: 768px) {
-      color: slate;
-    }
   }
 
   .patent-description {
-    box-shadow: 0 10px 30px -15px black;
-    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-
-    &:hover,
-    &:focus {
-      box-shadow: 0 20px 30px -15px black;
-    }
+    ${({theme}) => theme.mixins.boxshadow};
 
     position: relative;
     z-index: 2;
     padding: 25px;
-    border-radius: 4px;
-    background-color: white;
-    color: black;
-    font-size: 16px;
+    border-radius: var(--border-radius);
+    background-color: var(--white);
+    color: var(--slate-gray);
+    font-size: var(--md);
     font-weight: 400;
 
     @media (max-width: 768px) {
       padding: 20px 0;
       background-color: transparent;
       box-shadow: none;
+      color: var(--black);
 
       &:hover {
         box-shadow: none;
       }
-    }
-
-    a {
-        color: #546bf9;
     }
   }
 
@@ -170,9 +152,9 @@ const Patent = styled.div`
 
     li {
       margin: 0 20px 5px 0;
-      color: slate;
-      font-size: 13px;
-      font-family: monospace;
+      color: var(--slate-gray);
+      font-size: var(--xs);
+      font-family: var(--font-mono);
       white-space: nowrap;
     }
 
@@ -181,7 +163,7 @@ const Patent = styled.div`
 
       li {
         margin: 0 10px 5px 0;
-        color: slate;
+        color: var(--black);
       }
     }
   }
@@ -192,9 +174,11 @@ const Patent = styled.div`
     position: relative;
     margin-top: 10px;
     margin-left: -10px;
-    color: slate;
+    color: var(--slate-gray);
+
     a {
       padding: 10px;
+
       svg {
         width: 20px;
         height: 20px;
@@ -224,7 +208,8 @@ const Patent = styled.div`
 
     a {
       width: 100%;
-      border-radius: 4px;
+      border-radius: var(--border-radius);
+      color: var(--blue);
       vertical-align: middle;
 
       &:hover,
@@ -249,13 +234,13 @@ const Patent = styled.div`
         bottom: 0;
         z-index: 1;
         transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-        background-color: #546bf9;
+        background-color: var(--blue);
         mix-blend-mode: screen;
       }
     }
 
     .img {
-      border-radius: 4px;
+      border-radius: var(--border-radius);
       mix-blend-mode: multiply;
       filter: grayscale(100%) contrast(1) brightness(90%);
 
@@ -270,48 +255,56 @@ const Patent = styled.div`
 `;
 
 function Patents () {
-    return (
-        <Container fluid className="patents mb-5">
-            <h2 className="preface"><span role="img" aria-label="patents">📜</span>Patents</h2>
-            {strings.patents.map((patent, i) => {
-                return (
-                    <Patent>
-                        <div className="patent-content">
-                            <p className="patent-overline">{patent.date}</p>
-                            <h3 className="patent-title">{patent.title}</h3>
-                            <div className="patent-description">
-                                {patent.description}
-                            </div>
+  // Get the appropriate patent image for each of the patent(s)
+  const getPatentImage = (name) => {
+      // If it is the first patent (01)..
+      if (name == "patent01.png") {
+        return patent01;
+      }
+  }
 
-                            <ul className="patent-tag-list">
-                                {patent.tags.map((tag, j) => {
-                                    return <li key={j}>{tag}</li>
-                                })}
-                            </ul>
+  return (
+      <Container fluid className="patents pb-5">
+          <h2 className="section-header">📜 Patents</h2>
+          {strings.patents.map((patent, i) => {
+              return (
+                  <Patent>
+                      <div className="patent-content">
+                          <p className="patent-overline">{patent.date}</p>
+                          <h3 className="patent-title">{patent.title}</h3>
+                          <div className="patent-description">
+                              {patent.description}
+                          </div>
 
-                            <div className="patent-links">
-                                {patent.github !== "" && (
-                                <a href={patent.github} aria-label="Github link">
-                                    <AiFillGithub />
-                                </a>  
-                                )}
-                                {patent.external !== "" && (
-                                    <a href={patent.external} aria-label="External link">
-                                        <AiOutlineLink />
-                                    </a>
-                                )}
-                            </div>
-                        </div>
-                        <div className="patent-image">
-                            <a href={patent.external ? patent.external : patent.github ? patent.github : '#'}>
-                                <Image src={patent01} fluid className="img"/>
-                            </a>
-                        </div>
-                    </Patent>
-                )
-            })}
-        </Container>
-    )
+                          <ul className="patent-tag-list">
+                              {patent.tags.map((tag, j) => {
+                                  return <li key={j}>{tag}</li>
+                              })}
+                          </ul>
+
+                          <div className="patent-links">
+                              {patent.github !== "" && (
+                              <a href={patent.github} aria-label="Github link">
+                                  <AiFillGithub />
+                              </a>  
+                              )}
+                              {patent.external !== "" && (
+                                  <a href={patent.external} aria-label="External link">
+                                      <AiOutlineLink />
+                                  </a>
+                              )}
+                          </div>
+                      </div>
+                      <div className="patent-image">
+                          <a href={patent.external ? patent.external : patent.github ? patent.github : '#'}>
+                              <Image src={getPatentImage(strings.patents[i].image)} fluid className="img"/>
+                          </a>
+                      </div>
+                  </Patent>
+              )
+          })}
+      </Container>
+  )
 }
 
 export default Patents;

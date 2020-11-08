@@ -10,16 +10,48 @@
  * @file footer/index.js
  */
 
- import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 
- import Container from 'react-bootstrap/Container';
- import Row from 'react-bootstrap/Row';
- import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import styled from 'styled-components';
 
- import {AiOutlineFork, AiFillStar} from 'react-icons/ai';
+import {AiOutlineFork, AiFillStar} from 'react-icons/ai';
 
- import strings from '@content/strings.json';
- import '@css/footer.css';
+import strings from '@content/strings.json';
+import '@css/footer.css';
+
+const StyledFooter = styled.div`
+    ${({theme}) => theme.mixins.fcenter}
+    flex-direction: column;
+    margin-bottom: 30px;
+
+
+    h1 {
+        font-size: var(--md);
+        color: var(--black);
+        max-width: 300px;
+        font-weight: 600;
+        font-family: var(--font-mono);
+    }
+
+    p {
+        font-size: var(--xxs);
+        color: var(--slate-gray);
+        max-width: 300px;
+        font-weight: 300;
+        font-family: var(--font-mono);
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-size: var(--sm);
+        color: var(--slate-gray);
+        max-width: 250px;
+        font-weight: 400;
+        font-family: var(--font-mono);
+    }
+`;
 
 function Footer () {
     // Define state for the GitHub information from the GitHub API
@@ -42,17 +74,15 @@ function Footer () {
         // If the information has been loaded..
         if (githubInfo.stars !== null && githubInfo.forks !== null) {
             return (
-                <a href={strings.github} target="_blank" rel="noreferrer" style={{textDecoration: 'none'}}>
-                    <div>
-                        <span className="github-span">
-                            <AiFillStar size={14} />
-                            <span className="github-span">{githubInfo.stars}</span>
-                        </span>
-                        <span className="github-span">
-                            <AiOutlineFork size={14} />
-                            <span className="github-span">{githubInfo.forks}</span>
-                        </span>
-                    </div>
+                <a href={strings.github}>
+                    <span className="github-span">
+                        <AiFillStar size={14} />
+                        <span className="github-span">{githubInfo.stars}</span>
+                    </span>
+                    <span className="github-span">
+                        <AiOutlineFork size={14} />
+                        <span className="github-span">{githubInfo.forks}</span>
+                    </span>
                 </a>
             )
         }
@@ -60,16 +90,20 @@ function Footer () {
 
     return (
         <footer className="mt-5">
-            <Container fluid>
-                <Row className="border-top justify-content-between p-3">
-                    <Col className="p-0 d-flex justify-content-start align-items-center" md={3} sm={6} xs={4}>
-                        {renderGithubInfo()}
-                    </Col>
-                    <Col className="p-0 d-flex justify-content-end align-items-center" md={9} sm={6} xs={8} style={{fontSize: 14}}>
-                        {strings.copyright}
-                    </Col>
-                </Row>
-            </Container>
+            <StyledFooter>
+                <h1>Built with ❤️ by Robert Dekovich</h1>
+                <p>Design and inspiration from&nbsp;
+                    <a href="https://brittanychiang.com/" className="inline-link">
+                        Brittany Chiang
+                    </a>
+                    &nbsp;and&nbsp;
+                    <a href="https://www.youtube.com/channel/UCxSITxL2JbF229OGCqieVZw" className="inline-link">
+                        Garrett Love
+                    </a>
+                    .
+                </p>
+                <h2>{renderGithubInfo()}</h2>
+            </StyledFooter>
         </footer>
     )
 }

@@ -10,12 +10,7 @@
  * @file App.js
  */
 
-import {
-  BrowserRouter as Router,
-  Link,
-  Route
-} from "react-router-dom";
-import Scroll from 'react-scroll';
+import {BrowserRouter as Router} from "react-router-dom";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Navbar from 'react-bootstrap/Navbar';
@@ -32,51 +27,56 @@ import Projects from '@pages/projects';
 import Contact from '@pages/contact';
 
 import strings from '@content/strings.json';
+import {ThemeProvider} from 'styled-components';
+import {GlobalStyle, theme} from "@styles/index.js";
 
 function App () {
   return (
     <Router>
-      <Container className="p-0" fluid>
-        <Navbar id="nav" className="border-bottom sticky-top" bg="white" expand="lg">
-          <Navbar.Brand style={{fontWeight: 'bold'}}>{strings.title}</Navbar.Brand>
-          <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" style={{border: 'none', outline: 'none'}}/>
-          <Navbar.Collapse id="navbar-toggle">
-            <Nav className="ml-auto">
-              <a class="nav-link" href={'#' + strings.routes[0].route}>{strings.routes[0].title}</a>
-              <a class="nav-link" href={'#' + strings.routes[1].route}>{strings.routes[1].title}</a>
-              <a class="nav-link" href={'#' + strings.routes[2].route}>{strings.routes[2].title}</a>
-              <a class="nav-link" href={'#' + strings.routes[3].route}>{strings.routes[3].title}</a>
-              <a class="nav-link" href={'#' + strings.routes[4].route}>{strings.routes[4].title}</a>
-              <a class="nav-link" href={'#' + strings.routes[5].route}>{strings.routes[5].title}</a>
-              <a class="nav-link" href={'#' + strings.routes[6].route}>{strings.routes[6].title}</a>
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>
-        <Container data-spy="scroll" data-target="#nav" data-offset="0">
-          <Row id={strings.routes[0].route}>
-            <Home />
-          </Row>
-          <Row id={strings.routes[1].route}>
-            <About />
-          </Row>
-          <Row id={strings.routes[2].route}>
-            <Experience />
-          </Row>
-          <Row id={strings.routes[3].route}>
-            <Education />
-          </Row>
-          <Row id={strings.routes[4].route}>
-            <Patents />
-          </Row>
-          <Row id={strings.routes[5].route}>
-            <Projects />
-          </Row>
-          <Row id={strings.routes[6].route}>
-            <Contact />
-          </Row>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <Container className="p-0" fluid>
+          <Navbar id="nav" className="border-bottom sticky-top" bg="white" expand="lg">
+            <Navbar.Brand style={{fontWeight: 'bold'}}>{strings.title}</Navbar.Brand>
+            <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" style={{border: 'none', outline: 'none'}}/>
+            <Navbar.Collapse id="navbar-toggle">
+              <Nav className="ml-auto">
+                <a class="nav-link" href={'#' + strings.routes[0].route}>{strings.routes[0].title}</a>
+                <a class="nav-link" href={'#' + strings.routes[1].route}>{strings.routes[1].title}</a>
+                <a class="nav-link" href={'#' + strings.routes[2].route}>{strings.routes[2].title}</a>
+                <a class="nav-link" href={'#' + strings.routes[3].route}>{strings.routes[3].title}</a>
+                <a class="nav-link" href={'#' + strings.routes[4].route}>{strings.routes[4].title}</a>
+                <a class="nav-link" href={'#' + strings.routes[5].route}>{strings.routes[5].title}</a>
+                <a class="nav-link" href={'#' + strings.routes[6].route}>{strings.routes[6].title}</a>
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>
+            <Container data-spy="scroll" data-target="#nav" data-offset="0">
+              <Row id={strings.routes[0].route}>
+                <Home />
+              </Row>
+              <Row id={strings.routes[1].route}>
+                <About />
+              </Row>
+              <Row id={strings.routes[2].route}>
+                <Experience />
+              </Row>
+              <Row id={strings.routes[3].route}>
+                <Education />
+              </Row>
+              <Row id={strings.routes[4].route}>
+                <Patents />
+              </Row>
+              <Row id={strings.routes[5].route}>
+                <Projects />
+              </Row>
+              <Row id={strings.routes[6].route}>
+                <Contact />
+              </Row>
+            </Container>
+          <Footer />
         </Container>
-        <Footer />
-      </Container>
+      </ThemeProvider>
     </Router>
   );
 }

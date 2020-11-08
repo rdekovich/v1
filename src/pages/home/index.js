@@ -11,32 +11,109 @@
  */
 
  import Container from 'react-bootstrap/Container';
- import Row from 'react-bootstrap/Row';
- import Col from 'react-bootstrap/Col';
+
+ import styled from 'styled-components';
+ import strings from '@content/strings.json';
 
  import '@css/home.css';
- import '@css/mixins.css';
 
- import strings from '@content/strings.json';
+ // Define a styled component for the Home page
+ const StyledHome = styled.div`
+    ${({ theme }) => theme.mixins.fcenter};
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 75vh;
+
+    h1 {
+        margin: 0 0 25px 4px;
+        color: var(--blue);
+        font-family: var(--font-mono);
+        font-size: clamp(var(--sm), 5vw, var(--md));
+        font-weight: 400;
+
+        @media (max-width: 480px) {
+            margin: 0 0 20px 2px;
+        }
+    }
+
+    h2 {
+        color: var(--black);
+        font-size: 52px;
+        font-weight: 900;
+    }
+
+    h3 {
+        margin-top: 10px;
+        color: var(--slate-gray);
+        font-size: 52px;
+        line-height: 0.9;
+    }
+
+    .desc {
+        margin-top: 20px;
+        max-width: 500px;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: row;
+        min-width: 400px;
+        margin-top: 40px;
+    }
+
+    .home-button {
+        ${({theme}) => theme.mixins.button};
+        height: 50px;
+        margin: 10px;
+        margin-right: 12.5px;
+        margin-left: 0px;
+    }
+
+    .resume-color {
+        background-color: var(--blue);
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: var(--blue-tint);
+        }
+        &:after {
+            display: none !important;
+        }
+    }
+
+    .contact-color {
+        background-color: var(--slate-gray);
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: var(--slate-gray-tint);
+        }
+        &:after {
+            display: none !important;
+        }
+    }
+ `
 
  function Home () {
      return (
          <Container fluid className="home">
-            <greeting>Hey, my name is</greeting>
-            <name>Robert Dekovich.</name>
-            <subheader>I make impactful technology.</subheader>
-            <intro>
-                I'm a software engineer based in Austin, TX specializing in designing
-                and building impactful, innovative solutions to hard problems.
-            </intro>
-            <Row>
-                <Col className="home-col" md={3} sm={6} xs={5}>
-                    <a href={strings.resume} type="button" class="btn btn-primary">Resume</a>
-                </Col>
-                <Col className="home-col" md={3} sm={6} xs={5}>
-                    <a type="button" class="btn btn-secondary" href={`mailto:${strings.email}`}>Contact</a>
-                </Col>
-            </Row>
+             <StyledHome>
+                <h1>Hey, my name is</h1>
+                <h2>Robert Dekovich.</h2>
+                <h3>I make impactful technology.</h3>
+                <p className="desc">
+                    I'm a software engineer based in Austin, TX specializing in designing
+                    and building impactful, innovative solutions to hard problems.
+                </p>
+                <div className="buttons">
+                    <a className="home-button resume-color" href={strings.resume}>
+                        Resume
+                    </a>
+                    <a className="home-button contact-color" href={`mailto:${strings.email}`}>
+                        Contact me
+                    </a>
+                </div>
+            </StyledHome>
          </Container>
      )
  }
