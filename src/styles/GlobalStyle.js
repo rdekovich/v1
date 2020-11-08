@@ -15,7 +15,6 @@
  const GlobalStyle = createGlobalStyle`
     :root {
         --black: #070707;
-        --grayish-green: #7F9183;
         --blue: #546BF9;
         --blue-tint: rgba(84, 107, 249, 0.75);
         --lightest-blue: rgba(84, 107, 249, 0.1);
