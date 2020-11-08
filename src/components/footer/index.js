@@ -39,7 +39,7 @@ const StyledFooter = styled.div`
         font-weight: 300;
         font-family: var(--font-mono);
         text-align: center;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
 
     h2 {

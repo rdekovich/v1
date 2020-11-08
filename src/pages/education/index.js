@@ -19,7 +19,7 @@ import styled from "styled-components";
 import strings from '@content/strings.json';
 import "@css/education.css";
 
- const StyledEducation = styled.div`
+ const StyledEducation = styled.section`
     max-width: 800px;
 
     .inner {
@@ -98,6 +98,7 @@ import "@css/education.css";
     @media (max-width: 600px) {
         ${({theme}) => theme.mixins.fcenter};
         min-width: 120px;
+        width: var(--tab-width);
         padding: 0 15px;
         border-left: 0;
         border-bottom: 2px solid var(--slate-gray-tint);

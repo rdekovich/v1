@@ -20,7 +20,7 @@ import strings from "@content/strings.json";
 import "@css/about.css";
 
 const StyledAbout = styled.div`
-    max-width: 1000px;
+    max-width: 900px;
 
     .inner {
         display: grid;

@@ -36,7 +36,8 @@
 
         --border-radius: 4px;
         --tab-height: 42px;
-        --tab-width: 120px;
+        --tab-width-edu: 195px;
+        --tab-width-job: 130px;
 
         --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     }
@@ -67,7 +68,7 @@
         margin: 0;
         width: 100%;
         min-height: 100%;
-        overflow: auto;
+        overflow-x: hidden !important;
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
         background-color: var(--white);

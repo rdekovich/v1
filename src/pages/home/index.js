@@ -23,6 +23,8 @@
     flex-direction: column;
     align-items: flex-start;
     min-height: 75vh;
+    max-width: 100vw;
+    overflow: hidden;
 
     h1 {
         margin: 20px 0 25px 4px;

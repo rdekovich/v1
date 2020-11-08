@@ -97,6 +97,7 @@ import "@css/experience.css";
     @media (max-width: 600px) {
         ${({theme}) => theme.mixins.fcenter};
         min-width: 120px;
+        width: var(--tab-width-job);
         padding: 0 15px;
         border-left: 0;
         border-bottom: 2px solid var(--slate-gray-tint);
@@ -126,10 +127,10 @@ import "@css/experience.css";
         top: auto;
         bottom: 0;
         width: 100%;
-        max-width: var(--tab-width);
+        max-width: var(--tab-width-job);
         height: 2px;
         margin-left: 50px;
-        transform: translateX(calc(${({ activeTabID }) => activeTabID} * var(--tab-width)));
+        transform: translateX(calc(${({ activeTabID }) => activeTabID} * var(--tab-width-job)));
     }
 
     @media (max-width: 480px) {
