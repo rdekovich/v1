@@ -14,7 +14,6 @@ import {AiOutlineTwitter, AiFillMail, AiOutlineGithub, AiFillLinkedin} from "rea
 import styled from "styled-components";
 
 import strings from "@content/strings.json";
-import Footer from '@components/footer';
 import "@css/contact.css";
 
 const Social = styled.div`
@@ -47,7 +46,7 @@ const Social = styled.div`
 
 function Contact () {
     return (
-        <Container fluid className="contact flex-container">
+        <Container fluid className="contact">
             <Social>
                 <h1>Wanna chat?</h1>
                 <p>
@@ -78,7 +77,6 @@ function Contact () {
                     </span>
                 </div>
             </Social>
-            <Footer />
         </Container>
     )
 }

@@ -21,7 +21,7 @@ import strings from '@content/strings.json';
 const StyledFooter = styled.div`
     ${({theme}) => theme.mixins.fcenter}
     flex-direction: column;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 
     h1 {
         font-size: var(--md);

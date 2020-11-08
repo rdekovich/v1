@@ -26,6 +26,7 @@ import Projects from '@pages/projects';
 import Contact from '@pages/contact';
 
 import strings from '@content/strings.json';
+import Footer from '@components/footer';
 import {ThemeProvider} from 'styled-components';
 import {GlobalStyle, theme} from "@styles/index.js";
 
@@ -34,7 +35,7 @@ function App () {
     <Router>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <Container className="p-0" fluid>
+        <Container className="p-0">
           <Navbar id="nav" className="border-bottom sticky-top" bg="white" expand="lg">
             <Navbar.Brand className="nav-brand">{strings.title}</Navbar.Brand>
             <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" style={{border: 'none', outline: 'none'}}/>
@@ -87,6 +88,7 @@ function App () {
                 <Contact />
               </Row>
             </Container>
+            <Footer />
         </Container>
       </ThemeProvider>
     </Router>
