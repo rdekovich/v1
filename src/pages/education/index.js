@@ -197,11 +197,11 @@ function Education () {
                             return (
                                 <li key={i}>
                                     <StyledTabButton 
-                                        isActive={activeTabID == i}
+                                        isActive={activeTabID === i}
                                         onClick={() => setActiveTabID(i)}
                                         id={`education-${i}`}
                                         role={"tab"}
-                                        aria-selected={activeTabID == i ? true : false}
+                                        aria-selected={activeTabID === i ? true : false}
                                     >
                                         <span>{school.school}</span>
                                     </StyledTabButton>

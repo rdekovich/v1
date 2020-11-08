@@ -215,11 +215,11 @@ function Experience () {
                             return (
                                 <li key={i}>
                                     <StyledTabButton 
-                                        isActive={activeTabID == i}
+                                        isActive={activeTabID === i}
                                         onClick={() => setActiveTabID(i)}
                                         id={`job-${i}`}
                                         role={"tab"}
-                                        aria-selected={activeTabID == i ? true : false}
+                                        aria-selected={activeTabID === i ? true : false}
                                     >
                                         <span>{job.company}</span>
                                     </StyledTabButton>

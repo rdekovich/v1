@@ -258,7 +258,7 @@ function Patents () {
   // Get the appropriate patent image for each of the patent(s)
   const getPatentImage = (name) => {
       // If it is the first patent (01)..
-      if (name == "patent01.png") {
+      if (name === "patent01.png") {
         return patent01;
       }
   }

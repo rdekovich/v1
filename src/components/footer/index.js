@@ -12,7 +12,6 @@
 
 import React, {useState, useEffect} from 'react';
 
-import Container from 'react-bootstrap/Container';
 import styled from 'styled-components';
 
 import {AiOutlineFork, AiFillStar} from 'react-icons/ai';
