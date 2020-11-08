@@ -96,6 +96,7 @@
     .big-heading {
         margin: 0;
         font-size: clamp(40px, 8vw, 80px);
+        color: var(--black);
     }
 
     .medium-heading {

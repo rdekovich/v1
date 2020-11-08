@@ -34,20 +34,13 @@
         font-weight: 400;
 
         @media (max-width: 480px) {
-            margin: 0 0 20px 2px;
+            margin: 30px 0 20px 2px;
         }
-    }
-
-    h2 {
-        color: var(--black);
-        font-size: 52px;
-        font-weight: 900;
     }
 
     h3 {
         margin-top: 10px;
         color: var(--slate-gray);
-        font-size: 52px;
         line-height: 0.9;
     }
 
@@ -101,8 +94,8 @@
          <Container fluid className="home">
              <StyledHome>
                 <h1>Hey, my name is</h1>
-                <h2>Robert Dekovich.</h2>
-                <h3>I make impactful technology.</h3>
+                <h2 className="big-heading">Robert Dekovich.</h2>
+                <h3 className="big-heading">I make impactful technology.</h3>
                 <p className="desc">
                     I'm a software engineer based in Austin, TX specializing in designing
                     and building impactful, innovative solutions to hard problems.
