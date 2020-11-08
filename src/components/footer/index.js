@@ -48,6 +48,7 @@ const StyledFooter = styled.div`
         max-width: 250px;
         font-weight: 400;
         font-family: var(--font-mono);
+        margin: 10px;
     }
 
     .github-span {
