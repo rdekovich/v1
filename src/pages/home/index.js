@@ -25,7 +25,7 @@
     min-height: 75vh;
 
     h1 {
-        margin: 0 0 25px 4px;
+        margin: 20px 0 25px 4px;
         color: var(--blue);
         font-family: var(--font-mono);
         font-size: clamp(var(--sm), 5vw, var(--md));

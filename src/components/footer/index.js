@@ -29,6 +29,7 @@ const StyledFooter = styled.div`
         max-width: 300px;
         font-weight: 600;
         font-family: var(--font-mono);
+        text-align: center;
     }
 
     p {
