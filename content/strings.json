@@ -104,12 +104,21 @@
         },
         {
          "date": "September 2020",
-        "title": "Rudder",
-        "company": "Michigan",
-        "github": "https://github.com/Rudder-EECS441/rudder",
-        "external": "",
-        "tags": ["React Native", "iOS", "Android", "JavaScript"],
-        "description": "A cross-platform mobile dating app, focusing on connecting individuals from different countries.  Built in React Native using JavaScript."
+         "title": "Rudder",
+         "company": "Michigan",
+         "github": "https://github.com/Rudder-EECS441/rudder",
+         "external": "",
+         "tags": ["React Native", "iOS", "Android", "JavaScript"],
+         "description": "A cross-platform mobile dating app, focusing on connecting individuals from different countries.  Built in React Native using JavaScript."
+        },
+        {
+         "date": "November 2020",
+         "title": "v1",
+         "company": "-",
+         "github": "https://github.com/rdekovich/v1",
+         "external": "https://robdekovich.com",
+         "tags": ["React", "JavaScript", "ES6", "Bootstrap", "Node"],
+         "description": "The first iteration of my personal website.  Made with React/Bootstrap in JavaScript, with a Node backend."
         }
     ]
 }
