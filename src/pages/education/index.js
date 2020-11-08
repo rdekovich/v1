@@ -82,7 +82,7 @@ import "@css/education.css";
     height: var(--tab-height);
     padding: 0 20px 2px;
     border: none;
-    border-left: 2px solid var(--slate-gray-tint);
+    border-left: 2px solid ${({isActive}) => (isActive ? 'var(--blue)' : 'var(--slate-gray-tint)')};
     background-color: transparent;
     color: ${({isActive}) => (isActive ? 'var(--blue)' : 'var(--slate-gray)')};
     font-family: var(--font-mono);
@@ -98,10 +98,9 @@ import "@css/education.css";
     @media (max-width: 600px) {
         ${({theme}) => theme.mixins.fcenter};
         min-width: 120px;
-        width: var(--tab-width);
         padding: 0 15px;
         border-left: 0;
-        border-bottom: 2px solid var(--slate-gray-tint);
+        border-bottom: 2px solid ${({isActive}) => (isActive ? 'var(--blue)' : 'var(--slate-gray-tint)')};
         text-align: center;
     }
 
@@ -206,7 +205,6 @@ function Education () {
                                     >
                                         <span>{school.school}</span>
                                     </StyledTabButton>
-                                    <StyledHighlight activeTabID={activeTabID}/>
                                 </li>
                             )
                         })}

@@ -36,8 +36,7 @@
 
         --border-radius: 4px;
         --tab-height: 42px;
-        --tab-width-edu: 195px;
-        --tab-width-job: 130px;
+        --tab-width: 120px;
 
         --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     }
