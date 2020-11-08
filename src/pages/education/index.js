@@ -110,34 +110,6 @@ import "@css/education.css";
     }
  `;
 
- const StyledHighlight = styled.div`
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    width: 2px;
-    height: var(--tab-height);
-    border-radius: var(--border-radius);
-    background: var(--blue);
-    transform: translateY(calc(${({ activeTabID }) => activeTabID} * var(--tab-height)));
-    transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-    transition-delay: 0.1s;
-
-    @media (max-width: 600px) {
-        top: auto;
-        bottom: 0;
-        width: 100%;
-        max-width: var(--tab-width);
-        height: 2px;
-        margin-left: 50px;
-        transform: translateX(calc(${({ activeTabID }) => activeTabID} * var(--tab-width)));
-    }
-
-    @media (max-width: 480px) {
-        margin-left: 25px;
-    }
- `;
-
  const StyledContent = styled.div`
     width: 100%;
     height: auto;
