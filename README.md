@@ -45,7 +45,7 @@ $ pwd
 2. Install the ```package.json``` dependencies and setup via NPM
 
 ```
-npm install
+$ npm install
 ```
 
 3. Once installed, you can start a developmental server on your ```localhost``` with the following
@@ -67,7 +67,7 @@ $ npm run build
 2. To look at the site how it would appear with this build, run ```serve```
 
 ```
-npm run serve
+$ npm run serve
 ```
 
 ## 🎨 Color reference
