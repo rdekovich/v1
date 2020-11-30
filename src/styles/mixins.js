@@ -51,7 +51,7 @@
             &:after {
                 width: 100%;
             }
-            & < * {
+            & > * {
                 color: var(--blue) !important;
                 transition: var(--transition);
             }
@@ -62,7 +62,7 @@
             width: 0;
             height: 1px;
             position: relative;
-            bottom: 0.37em;
+            bottom: 0.2em;
             background-color: var(--blue);
             transition: var(--transition);
             opacity: 0.5;
@@ -97,13 +97,15 @@
         }
      `,
      button: css`
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: var(--blue);
         color: var(--white);
         border-radius: var(--border-radius);
         padding: 1.25rem 1.75rem;
         font-size: var(--sm);
         font-family: var(--font-mono);
-        line-height: 1;
         text-decoration: none;
         cursor: pointer;
         transition: var(--transition);

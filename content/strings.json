@@ -103,15 +103,6 @@
          "description": "A cross-platform strength training mobile app with beautiful UI, powerful analytics, and workout logging for weightlifters.  Built in React Native using JavaScript."
         },
         {
-         "date": "September 2020",
-         "title": "Rudder",
-         "company": "Michigan",
-         "github": "https://github.com/Rudder-EECS441/rudder",
-         "external": "",
-         "tags": ["React Native", "iOS", "Android", "JavaScript"],
-         "description": "A cross-platform mobile dating app, focusing on connecting individuals from different countries.  Built in React Native using JavaScript."
-        },
-        {
          "date": "November 2020",
          "title": "v1",
          "company": "-",
