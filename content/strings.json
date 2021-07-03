@@ -12,8 +12,8 @@
     "copyright": "Copyright © 2020 - Robert Dekovich.  All Rights Reserved.",
     "github": "https://github.com/rdekovich/v1",
     "githubAPI": "https://api.github.com/repos/rdekovich/v1",
-    "email": "dekovich@umich.edu",
-    "resume": "https://drive.google.com/file/d/1odHPmuRYsyQ7QM2V7ND3bcQ-FKRMYviO/view?usp=sharing",
+    "email": "rob@cyberwzrd.com",
+    "resume": "https://drive.google.com/file/d/1KeZsdk9wHTQVPKuqXGBRKTNTujO33OsR/view?usp=sharing",
     "twitter": "https://twitter.com/robdekovich",
     "githubUser": "https://github.com/rdekovich",
     "linkedin": "https://www.linkedin.com/in/robdekovich/",
@@ -28,7 +28,8 @@
          "url": "https://www.gm.com/",
          "tasks": [
              "Write modern, efficient, maintainable code for a broad range of internal projects and clients",
-             "Develop application-level vehicle software interfaces, as well as developmental recognition technologies using machine learning",
+             "Develop various applications and automation tools for both product and infrastructure endeavours",
+             "Assist in GM's transition to using OSS in both products and infrastructure",
              "Communicate with a multi-disciplinary team of engineers, researchers, designers and clients daily"
          ]
         },
