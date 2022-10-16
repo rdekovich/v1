@@ -137,20 +137,22 @@ function About () {
                 <div className="inner">
                     <StyledText>
                         <div>
-                            <p>Howdy!  I'm Rob, a software engineer based in Austin, TX.</p>
                             <p>
-                                I enjoy building software that truly enhances people's lives.  I have
-                                made mobile apps, websites, tools, embedded firmware and much more!  I am
-                                super robust in terms of what I can do with a computer.  My goal is to
-                                leave a positive impact on this world through the use of software and technology!
+                                Howdy!  I'm Rob, a software engineer based in Austin, TX.
                             </p>
                             <p>
-                                After I graduated from{' '}<a href={'https://umich.edu/'}>Michigan</a> in December 2020,
-                                I joined the software engineering team at{' '}<a href={'https://www.gm.com/'}>GM</a>, where I work on a
-                                plethora of challenging and interesting problems in the transportation industry.
+                                Currently, I am an SDE I at{' '}<a href={'https://www.amazon.com/'}>Amazon</a>, working
+                                in Information Security.  Our team focuses on resource and permissions governance at a
+                                massive scale, which naturally poses many complex and interesting new problems to solve.
+                                I have found great satisfaction in designing and implementing solutions to these problems,
+                                and learning about so many new technologies along the way.
                             </p>
                             <p>
-                                Here are a few of the technologies I work with, and regard myself proficient in:
+                                On a more personal note, I maintain many other hobbies and titles outside of software.  I am an
+                                avid basketball fan (Pistons), a "wanna be" chef, and a dominant{' '}<a href="https://playvalorant.com/">VALORANT</a> player in the NA servers (not actually).
+                            </p>
+                            <p>
+                                Here are a few technologies I have worked with, and regard myself very proficient in:
                             </p>
                         </div>
                         <ul className="skills-list">

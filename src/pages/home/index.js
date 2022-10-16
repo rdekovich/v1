@@ -95,11 +95,7 @@
              <StyledHome>
                 <h1>Hey, my name is</h1>
                 <h2 className="big-heading">Robert Dekovich.</h2>
-                <h3 className="big-heading">I make impactful technology.</h3>
-                <p className="desc">
-                    I'm a software engineer based in Austin, TX specializing in designing
-                    and building impactful, innovative solutions to hard problems.
-                </p>
+                <h3 className="big-heading">I'm a builder.</h3>
                 <div className="buttons">
                     <a className="home-button resume-color" href={strings.resume}>
                         Resume

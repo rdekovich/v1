@@ -17,20 +17,34 @@
     "twitter": "https://twitter.com/robdekovich",
     "githubUser": "https://github.com/rdekovich",
     "linkedin": "https://www.linkedin.com/in/robdekovich/",
-    "skills": ["JavaScript", "Python", "HTML/CSS", "C++", "React", "C"],
+    "skills": ["JavaScript/TS", "AWS", "Python", "Java", "C++", "React", "Docker", "C"],
     "jobs": [
+        {
+            "company": "Amazon", 
+            "title": "SDE I",
+            "location": "Austin, TX",
+            "start": "September 2021",
+            "end": "Present",
+            "url": "https://www.amazon.com/",
+            "tasks": [
+                "Lead, design, and implement various critical projects to Amazon's adoption of resource governance technologies",
+                "Contribute to our teams operational on-call, which includes service maintenance & customer/leadership engagement",
+                "Improve team development & operational processes, as well as improve legacy software to better our security posture",
+                "Participate in various interview loops for Amazon employees, as well as contingent workers (contractors)"
+            ]
+        },
         {
          "company": "General Motors", 
          "title": "Software Engineer",
          "location": "Austin, TX",
          "start": "January 2021",
-         "end": "Present",
+         "end": "August 2021",
          "url": "https://www.gm.com/",
          "tasks": [
-             "Write modern, efficient, maintainable code for a broad range of internal projects and clients",
-             "Develop various applications and automation tools for both product and infrastructure endeavours",
-             "Assist in GM's transition to using OSS in both products and infrastructure",
-             "Communicate with a multi-disciplinary team of engineers, researchers, designers and clients daily"
+             "Wrote modern, efficient, maintainable code for a broad range of internal projects and clients",
+             "Developed various applications and automation tools for both product and infrastructure endeavours",
+             "Assisted in GM's transition to using OSS (open source) in both products and infrastructure",
+             "Communicated with a multi-disciplinary team of engineers, researchers, designers and clients daily"
          ]
         },
         {
@@ -95,18 +109,9 @@
     ],
     "projects": [
         {
-         "date": "May 2020",
-         "title": "viribai",
-         "company": "Bytesap LLC",
-         "github": "https://github.com/bytesap/viribai",
-         "external": "https://viribai.web.app/",
-         "tags": ["React Native", "iOS", "Android", "JavaScript"],
-         "description": "A cross-platform strength training mobile app with beautiful UI, powerful analytics, and workout logging for weightlifters.  Built in React Native using JavaScript."
-        },
-        {
          "date": "November 2020",
          "title": "v1",
-         "company": "-",
+         "company": "Cyberwzrd",
          "github": "https://github.com/rdekovich/v1",
          "external": "https://robdekovich.com",
          "tags": ["React", "JavaScript", "ES6", "Bootstrap", "Node"],

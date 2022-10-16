@@ -50,9 +50,8 @@ function Contact () {
             <Social>
                 <h1>Wanna chat?</h1>
                 <p>
-                    Feel free to say what's up👋!  My inbox is always open.  I am totally
-                    interested in new and cool opportunities, as well as talking to other
-                    people interested in tech.
+                    Although I am not looking for any new employment opportunities, feel free to reach out!  I will try my best
+                    to get back to you in a timely manner.
                 </p>
                 <div className="social">
                     <span>
